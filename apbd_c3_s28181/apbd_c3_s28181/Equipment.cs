@@ -1,4 +1,4 @@
-namespace apbd_c2_s28181;
+
 
 public abstract class Equipment
 {

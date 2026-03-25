@@ -1,3 +1,4 @@
+
 namespace apbd_c3_s28181;
 
 public class Laptop: Equipment
