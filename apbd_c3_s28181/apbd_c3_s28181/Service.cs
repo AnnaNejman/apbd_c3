@@ -42,12 +42,19 @@ public class Service
         eq.Status = EquipmentStatusType.Rented;
     }
 
-    public void ReturnEquipment(Rent rent)
+    public void ReturnEquipment(Equipment eq)
     {
-        rent.Return(); 
-        rent.Equipment.Status = EquipmentStatusType.Available;
-
-        Console.WriteLine($"Kara {rent.FinancialPenalty} zł");
+        foreach (var r in rentals)
+        {
+            if (r.Equipment.Equals(eq))
+            {
+                r.Return();
+                r.Equipment.Status = EquipmentStatusType.Available;
+                Console.WriteLine($"Kara {r.FinancialPenalty} zł");
+                break;
+            }
+        }
+        
     }
 
     public void MakeUnavailable(Equipment eq)

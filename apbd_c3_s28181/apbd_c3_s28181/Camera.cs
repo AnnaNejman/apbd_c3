@@ -5,9 +5,9 @@ public class Camera:Equipment
     public int pixels {get; set;}
     public bool digital {get; set;}
 
-    public Camera(string name, int a, bool b) : base(name)
+    public Camera(string name, int pixels, bool digital) : base(name)
     {
-        pixels = a;
-        digital = b;
+        this.pixels = pixels;
+        this.digital = digital;
     }
 }
