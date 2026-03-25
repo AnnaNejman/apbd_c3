@@ -13,4 +13,5 @@ public abstract class Person
         FirstName = firstName;
         LastName = lastName;
     }
+    public abstract int MaxLoans { get; }
 }
